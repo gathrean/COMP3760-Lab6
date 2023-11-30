@@ -52,11 +52,13 @@ public class Lab6 {
             // Calculate the result recursively
             long result = SW_Recursive(currentValue, currentValue);
 
-            endTime = System.currentTimeMillis(); // Update the end time after the calculation
+            endTime = System.nanoTime(); // Update the end time after the calculation
+
+            double elapsedTimeMillis = (endTime - startTime) / 1_000_000.0;
 
             // Print out the result and the time it took to calculate it
             System.out.println("SW_Recursive(" + currentValue + "," + currentValue + ") = " + result
-                    + ", time it took " + (endTime - startTime) + " ms");
+                    + ", time it took: " + String.format("%.4f", elapsedTimeMillis) + " ms");
 
             currentValue++; // Increment the value for the next iteration
         }
@@ -110,11 +112,13 @@ public class Lab6 {
             // Calculate the result using dynamic programming
             long result = SW_DynamicProg(currentValue, currentValue);
 
-            endTime = System.currentTimeMillis(); // Update the end time after the calculation
+            endTime = System.nanoTime(); // Update the end time after the calculation
+
+            double elapsedTimeMillis = (endTime - startTime) / 1_000_000.0;
 
             // Print out the result and the time it took to calculate it
             System.out.println("SW_DynamicProg(" + currentValue + "," + currentValue + ") = " + result
-                    + ", time it took " + (endTime - startTime) + " ms");
+                    + ", time it took: " + String.format("%.4f", elapsedTimeMillis) + " ms");
 
             currentValue++; // Increment the value for the next iteration
         }
