@@ -17,12 +17,20 @@ public class Lab6 {
      * Please note that the calculations of SW and the return value are of type long.
      * No console output.
      *
-     * @param m
-     * @param n
-     * @return
+     * @param m - how many blocks down
+     * @param n - how many blocks to the right
+     * @return - A recursive call to SW_Recursive, which returns the number of paths
      */
     public long SW_Recursive(int m, int n) {
+        // Base Case
+        // If m is 0, it means walking n blocks straight to the right
+        // If n is 0, it means walking m blocks straight down
+        if (m == 0 || n == 0) {
+            return 1;
+        }
 
+        // Recursive Case
+        return SW_Recursive(m - 1, n) + SW_Recursive(m, n - 1);
     }
 
     /**
