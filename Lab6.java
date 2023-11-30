@@ -39,7 +39,7 @@ public class Lab6 {
      * to SW_Recursive.
      *
      * @param first - starting number
-     * @param last - stopping number
+     * @param last  - stopping number
      */
     public void RunRecursive(int first, int last) {
         int currentValue = first; // Initialize with the 'first' value
@@ -67,12 +67,28 @@ public class Lab6 {
      * Please note that the calculations of SW and the return value are of type long.
      * No console output.
      *
-     * @param m
-     * @param n
-     * @return
+     * @param m - how many blocks down
+     * @param n - how many blocks to the right
+     * @return - The value of SW(m, n)
      */
     public long SW_DynamicProg(int m, int n) {
+        // Create a 2D array to save the values of SW
+        long[][] savedValues = new long[m + 1][n + 1];
 
+        // Fill the 2D array with the values of SW
+        for (int i = 0; i <= m; i++) {
+            for (int j = 0; j <= n; j++) {
+                // If i or j is 0, it means walking straight down or straight to the right
+                if (i == 0 || j == 0) {
+                    savedValues[i][j] = 1;
+                } else { // Otherwise, calculate the value of SW
+                    savedValues[i][j] = savedValues[i - 1][j] + savedValues[i][j - 1];
+                }
+            }
+        }
+
+        // Done
+        return savedValues[m][n];
     }
 
     /**
