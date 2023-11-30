@@ -56,7 +56,7 @@ public class Lab6 {
 
             // Print out the result and the time it took to calculate it
             System.out.println("SW_Recursive(" + currentValue + "," + currentValue + ") = " + result
-                    + ", time is " + (endTime - startTime) + " ms");
+                    + ", time it took " + (endTime - startTime) + " ms");
 
             currentValue++; // Increment the value for the next iteration
         }
@@ -97,7 +97,7 @@ public class Lab6 {
      * to SW_DynamicProg.
      *
      * @param first - starting number
-     * @param last - stopping number
+     * @param last  - stopping number
      */
     public void RunDynamicProg(int first, int last) {
         int currentValue = first; // Initialize with the 'first' value
@@ -114,10 +114,11 @@ public class Lab6 {
 
             // Print out the result and the time it took to calculate it
             System.out.println("SW_DynamicProg(" + currentValue + "," + currentValue + ") = " + result
-                    + ", time is " + (endTime - startTime) + " ms");
+                    + ", time it took " + (endTime - startTime) + " ms");
 
             currentValue++; // Increment the value for the next iteration
         }
+
     }
 
     /**
