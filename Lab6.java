@@ -38,11 +38,28 @@ public class Lab6 {
      * Also uses one of the Java timing methods to measure the running time of each call
      * to SW_Recursive.
      *
-     * @param first
-     * @param last
+     * @param first - starting number
+     * @param last - stopping number
      */
     public void RunRecursive(int first, int last) {
+        int currentValue = first; // Initialize with the 'first' value
 
+        while (currentValue <= last) {
+            // Track the start and end time of each call to SW_Recursive
+            long startTime = System.currentTimeMillis();
+            long endTime;
+
+            // Calculate the result recursively
+            long result = SW_Recursive(currentValue, currentValue);
+
+            endTime = System.currentTimeMillis(); // Update the end time after the calculation
+
+            // Print out the result and the time it took to calculate it
+            System.out.println("SW_Recursive(" + currentValue + "," + currentValue + ") = " + result
+                    + ", time is " + (endTime - startTime) + " ms");
+
+            currentValue++; // Increment the value for the next iteration
+        }
     }
 
     /**
