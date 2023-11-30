@@ -119,4 +119,23 @@ public class Lab6 {
             currentValue++; // Increment the value for the next iteration
         }
     }
+
+    /**
+     * Main method
+     *
+     * @param args - command line arguments
+     */
+    public static void main(String[] args) {
+        int first = 3;
+        int last = 7;
+        Lab6 lab6 = new Lab6();
+
+        // Run the recursive method
+        System.out.println("Recursive Method:");
+        lab6.RunRecursive(first, last);
+
+        // Run the dynamic programming method
+        System.out.println("\nDynamic Programming Method:");
+        lab6.RunDynamicProg(first, last);
+    }
 }
