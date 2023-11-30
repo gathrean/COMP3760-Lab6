@@ -1,9 +1,8 @@
 /**
  * LAB 6
  * <p>
- * Student Name: Gathrean Dela Cruz
- * <p>
- * Student ID: A01167248
+ * Student Name: Gathrean Dela Cruz.
+ * Student ID: A01167248.
  * <p>
  * Program Description: <p>
  * - Given any two such locations on a grid of city streets,
@@ -13,19 +12,53 @@
  */
 public class Lab6 {
 
-    public long SW_Recursive(int m, int n){
+    /**
+     * Calculates and returns SW_Recursive(m, n) by using the recursive definition given above.
+     * Please note that the calculations of SW and the return value are of type long.
+     * No console output.
+     *
+     * @param m
+     * @param n
+     * @return
+     */
+    public long SW_Recursive(int m, int n) {
 
     }
 
-    public void RunRecursive(int first, int last){
+    /**
+     * Runs SW_Recursive in a loop, using values of m & n that are equal to each other.
+     * Also uses one of the Java timing methods to measure the running time of each call
+     * to SW_Recursive.
+     *
+     * @param first
+     * @param last
+     */
+    public void RunRecursive(int first, int last) {
 
     }
 
-    public long SW_DynamicProg(int m, int n){
+    /**
+     * Calculates SW(m, n) by using dynamic programming.
+     * Please note that the calculations of SW and the return value are of type long.
+     * No console output.
+     *
+     * @param m
+     * @param n
+     * @return
+     */
+    public long SW_DynamicProg(int m, int n) {
 
     }
 
-    public void RunDynamicProg(int first, int last){
+    /**
+     * Runs SW_DynamicProg in a loop, using values of m & n that are equal to each other.
+     * Also uses one of the Java timing methods to measure the running time of each call
+     * to SW_DynamicProg.
+     *
+     * @param first
+     * @param last
+     */
+    public void RunDynamicProg(int first, int last) {
 
     }
 }
